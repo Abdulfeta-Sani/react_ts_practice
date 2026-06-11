@@ -1,10 +1,10 @@
-import { useState } from "react";
+import ProductCard from "./components/ProductCard";
+const mockProduct = {
+  id: 1,
+  title: "Wireless Mouse",
+  price: 29.99,
+  image: "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_.jpg",
+};
 export default function App() {
-  const [value, setValue] = useState("");
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setValue(e.target.value);
-  }
-  return (
-    <input value={value} onChange={handleChange} placeholder="Type here" />
-  );
+  return <ProductCard product={mockProduct} />;
 }
